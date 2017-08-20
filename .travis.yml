@@ -1,4 +1,9 @@
 language: java
+before_script:
+  - echo "------------------"
+  - echo "JAVA_HOME: $JAVA_HOME"
+  - ls -alF $JAVA_HOME
+  - echo "------------------"
 script:
   - mvn package
 jdk:
