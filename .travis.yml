@@ -1,8 +1,8 @@
 language: java
-before_script:
+before_install:
   - echo "------------------"
   - sudo echo "JAVA_HOME = $JAVA_HOME"
-  - sudo ls -alF "$JAVA_HOME"
+  - sudo ls -alF "$JAVA_HOME"/bin
   - echo "------------------"
 script:
   - mvn package
