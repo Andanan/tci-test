@@ -67,7 +67,7 @@
 				</executions>
 				<configuration>
 					<outputDirectory>${dist.lib}</outputDirectory>
-					<scope>compile</scope>
+					<includeScope>compile</includeScope>
 				</configuration>
 			</plugin>
 			<plugin>
