@@ -1,6 +1,8 @@
 language: java
 script:
   - mvn package
+after_success:
+  - src/main/scripts/package-send.sh
 jdk:
   - oraclejdk8
   - openjdk8
