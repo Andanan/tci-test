@@ -8,6 +8,7 @@ ARCHIVE="$PROJECT_ROOT/$ARCHIVE_REL"
 TARGET_DIR="$PROJECT_ROOT/target"
 DIST_DIR="$TARGET_DIR/dist"
 RECIPIENT="andanan@mail.de"
+SUBJECT="Built $PROJECT_NAME"
 
 echo "--- packaging '$ARCHIVE_REL' ---"
 cd $DIST_DIR
@@ -27,7 +28,8 @@ function isInstalled() {
 	fi
 }
 
-isInstalled mail "echo \"MSG\" | mail -s \"subj\" -a \"$ARCHIVE\" -- $RECIPIENT"
-isInstalled mutt "echo \"MSG\" | mutt -s \"subj\" -a \"$ARCHIVE\" $RECIPIENT"
+isInstalled mail "echo \"MSG\" | mail -s \"$SUBJECT\" -a \"$ARCHIVE\" -- $RECIPIENT"
+isInstalled mutt "echo \"MSG\" | mutt -s \"$SUBJECT\" -a \"$ARCHIVE\" $RECIPIENT"
+isInstalled mpack "mpack -s \"$SUBJECT\" \"$ARCHIVE\" \"$RECIPIENT\""
 
 echo "--- end ---"
