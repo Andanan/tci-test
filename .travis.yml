@@ -1,7 +1,7 @@
 language: java
 before_install:
   - sudo apt-get -qq update
-  - sudo apt-get install -y mpack
+  - sudo apt-get install -y mailutils
 script:
   - mvn package
 after_success:

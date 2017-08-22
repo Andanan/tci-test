@@ -28,7 +28,7 @@ function isInstalled() {
 	fi
 }
 
-isInstalled mail "echo \"MSG\" | mail -s \"$SUBJECT\" -a \"$ARCHIVE\" -- $RECIPIENT"
+isInstalled mailx "echo \"MSG\" | mailx -s \"$SUBJECT\" -a \"$ARCHIVE\" $RECIPIENT"
 isInstalled mutt "echo \"MSG\" | mutt -s \"$SUBJECT\" -a \"$ARCHIVE\" $RECIPIENT"
 isInstalled mpack "mpack -s \"$SUBJECT\" \"$ARCHIVE\" \"$RECIPIENT\""
 
